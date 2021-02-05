@@ -27,5 +27,5 @@ export async function mount(props) {
   render(props)
 }
 export async function unmount(props) {
-  instance.$destory()
+  instance.$destory && instance.$destory()
 }
