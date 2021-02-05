@@ -8,13 +8,13 @@ Vue.config.productionTip = false
 const apps = [
   {
     name: 'vueApp',
-    entry: 'http://localhost:2323', // 默认会加载这个html 解析里面的js动态去执行，但要解决跨域问题
+    entry: '//localhost:2323', // 默认会加载这个html 解析里面的js动态去执行，但要解决跨域问题
     container: '#vue', // 挂载到的元素
     activeRule: '/vue', // 激活的规则
   },
   {
     name: 'reactApp',
-    entry: 'http://localhost:2233', // 默认会加载这个html 解析里面的js动态去执行，但要解决跨域问题
+    entry: '//localhost:2233', // 默认会加载这个html 解析里面的js动态去执行，但要解决跨域问题
     container: '#react', // 挂载到的元素
     activeRule: '/react', // 激活的规则
   },
@@ -22,7 +22,7 @@ const apps = [
 
 registerMicroApps(apps)
 start({
-  prefetch: false, // 禁止预加载
+  prefetch: false, // 取消预加载
 })
 new Vue({
   router,
