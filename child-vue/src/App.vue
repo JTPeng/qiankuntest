@@ -2,13 +2,25 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <el-button type="text" @click="toReact">to React</el-button>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  methods: {
+    toReact() {
+      this.instance.$router.push('/react')
+      // history.pushState({}, '', '/react')
+    },
+  },
+}
+</script>
+
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
