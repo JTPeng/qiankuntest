@@ -29,7 +29,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
 // 子组件协议
 export async function bootstrap(props) {}
 export async function mount(props) {
-  console.log(props)
+  // console.log(props)
   // 挂载父应用实例到子应用实例上
   Vue.prototype.instance = props.vueInstance
   render(props)
