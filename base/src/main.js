@@ -18,6 +18,12 @@ const apps = [
     container: '#react', // 挂载到的元素
     activeRule: '/react', // 激活的规则
   },
+  {
+    name: 'viteVueApp',
+    entry: '//localhost:3322', // 默认会加载这个html 解析里面的js动态去执行，但要解决跨域问题
+    container: '#viteVue', // 挂载到的元素
+    activeRule: '/viteVue', // 激活的规则
+  },
 ]
 
 registerMicroApps(apps)
